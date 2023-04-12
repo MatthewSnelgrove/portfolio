@@ -37,16 +37,13 @@ function Home() {
     <Fade>
       <div style={styles.mainContainer}>
         <h1 style={styles.nameStyle}>{data?.name}</h1>
-        <div style={{ flexDirection: "row" }}>
-          <h2 style={styles.inlineChild}>I&apos;m&nbsp;</h2>
-          <Typewriter
-            options={{
-              loop: true,
-              autoStart: true,
-              strings: data?.roles,
-            }}
-          />
-        </div>
+        <Typewriter
+          options={{
+            loop: true,
+            autoStart: true,
+            strings: data?.roles,
+          }}
+        />
         <Social />
       </div>
     </Fade>
