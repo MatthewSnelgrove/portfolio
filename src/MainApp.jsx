@@ -26,11 +26,9 @@ function MainApp() {
             <Route exact path="/" component={Home} />
             {data &&
               data.sections.map((route) => {
-                // console.log(route.component);
                 const SectionComponent = React.lazy(() =>
                   import("./components/" + route.component)
                 );
-                console.log(route.path);
                 return (
                   <Route
                     key={route.headerTitle}
