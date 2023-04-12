@@ -38,11 +38,11 @@ function Experience(props) {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    fetch(endpoints.experiences, {
+    fetch(endpoints.experience, {
       method: "GET",
     })
       .then((res) => res.json())
-      .then((res) => setData(res.experiences))
+      .then((res) => setData(res.experience))
       .catch((err) => err);
   }, []);
 
