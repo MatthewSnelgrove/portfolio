@@ -52,14 +52,14 @@ function Education(props) {
                 allowDynamicUpdate
                 useReadMore={false}
                 items={data.education}
-                cardHeight={250}
+                cardHeight={400}
                 mode={mode}
                 theme={{
                   primary: theme.accentColor,
-                  secondary: theme.accentColor,
+                  secondary: theme.color,
                   cardBgColor: theme.chronoTheme.cardBgColor,
                   cardForeColor: theme.chronoTheme.cardForeColor,
-                  titleColor: theme.chronoTheme.titleColor,
+                  titleColorActive: theme.background,
                 }}
               >
                 <div className="chrono-icons">

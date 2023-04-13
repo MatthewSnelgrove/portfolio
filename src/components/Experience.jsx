@@ -1,105 +1,81 @@
-/* eslint-disable react/jsx-key */
 /* eslint-disable react/destructuring-assignment */
 import React, { useEffect, useState, useContext } from "react";
-import { Timeline, TimelineItem } from "vertical-timeline-component-for-react";
+import { Chrono } from "react-chrono";
 import { Container } from "react-bootstrap";
-import ReactMarkdown from "react-markdown";
 import PropTypes from "prop-types";
-import { ThemeContext } from "styled-components";
 import Fade from "react-reveal";
-import Header from "./Header";
+import { ThemeContext } from "styled-components";
 import endpoints from "../constants/endpoints";
+import Header from "./Header";
 import FallbackSpinner from "./FallbackSpinner";
 import "../css/experience.css";
-
-const styles = {
-  ulStyle: {
-    listStylePosition: "outside",
-    paddingLeft: 20,
-  },
-  subtitleContainerStyle: {
-    marginTop: 10,
-    marginBottom: 10,
-  },
-  subtitleStyle: {
-    display: "inline-block",
-  },
-  inlineChild: {
-    display: "inline-block",
-  },
-  itemStyle: {
-    marginBottom: 10,
-  },
-};
 
 function Experience(props) {
   const theme = useContext(ThemeContext);
   const { header } = props;
   const [data, setData] = useState(null);
+  const [width, setWidth] = useState("50vw");
+  const [mode, setMode] = useState("VERTICAL_ALTERNATING");
 
   useEffect(() => {
-    fetch(endpoints.experiences, {
+    fetch(endpoints.experience, {
       method: "GET",
     })
       .then((res) => res.json())
-      .then((res) => setData(res.experiences))
+      .then((res) => setData(res))
       .catch((err) => err);
+
+    if (window?.innerWidth < 576) {
+      setMode("VERTICAL");
+    }
+
+    if (window?.innerWidth < 576) {
+      setWidth("90vw");
+    } else if (window?.innerWidth >= 576 && window?.innerWidth < 768) {
+      setWidth("85vw");
+    } else if (window?.innerWidth >= 768 && window?.innerWidth < 1024) {
+      setWidth("80vw");
+    } else {
+      setWidth("75vw");
+    }
   }, []);
 
   return (
     <>
       <Header title={header} />
-
       {data ? (
-        <div className="section-content-container">
-          <Container>
-            <Timeline lineColor={theme.timelineLineColor}>
-              {data.map((item) => (
-                <Fade>
-                  <TimelineItem
-                    key={item.title + item.dateText}
-                    dateText={item.dateText}
-                    dateInnerStyle={{ background: theme.accentColor }}
-                    style={styles.itemStyle}
-                    bodyContainerStyle={{ color: theme.color }}
-                  >
-                    <h2 className="item-title">{item.title}</h2>
-                    <div style={styles.subtitleContainerStyle}>
-                      <h4
-                        style={{
-                          ...styles.subtitleStyle,
-                          color: theme.accentColor,
-                        }}
-                      >
-                        {item.subtitle}
-                      </h4>
-                      {item.workType && (
-                        <h5 style={styles.inlineChild}>
-                          &nbsp;· {item.workType}
-                        </h5>
-                      )}
-                    </div>
-                    <ul style={styles.ulStyle}>
-                      {item.workDescription.map((point) => (
-                        <div key={point}>
-                          <li>
-                            <ReactMarkdown
-                              children={point}
-                              components={{
-                                p: "span",
-                              }}
-                            />
-                          </li>
-                          <br />
-                        </div>
-                      ))}
-                    </ul>
-                  </TimelineItem>
-                </Fade>
-              ))}
-            </Timeline>
-          </Container>
-        </div>
+        <Fade>
+          <div style={{ width }} className="section-content-container">
+            <Container>
+              <Chrono
+                hideControls
+                allowDynamicUpdate
+                useReadMore={false}
+                items={data.experience}
+                mode={mode}
+                theme={{
+                  primary: theme.accentColor,
+                  secondary: theme.color,
+                  cardBgColor: theme.chronoTheme.cardBgColor,
+                  cardForeColor: theme.chronoTheme.cardForeColor,
+                  titleColorActive: theme.background,
+                }}
+              >
+                <div className="chrono-icons">
+                  {data.experience.map((experience) =>
+                    experience.icon ? (
+                      <img
+                        key={experience.icon.src}
+                        src={experience.icon.src}
+                        alt={experience.icon.alt}
+                      />
+                    ) : null
+                  )}
+                </div>
+              </Chrono>
+            </Container>
+          </div>
+        </Fade>
       ) : (
         <FallbackSpinner />
       )}

@@ -1,19 +1,17 @@
 {
-    "education":[
-        {
-            "title": "Jun 20XX - Jun 20YY",
-            "cardTitle": "B.Tech, Computer Science",
-            "cardSubtitle":"XYZ University, City",
-            "cardDetailedText": "CGPA - 9.5",
-            "icon" : {
-                "src": "images/education/lorem-ipsum.png"
-            }
+  "education": [
+    {
+      "title": "September 2021 - Present",
+      "cardTitle": "Honours Bachelor of Science, Computer Science Specialist (Co-op)",
+      "cardSubtitle": "University of Toronto Scarborough",
+      "cardDetailedText": "CGPA - 3.67",
+      "media": {
+        "name": "utsc-icon",
+        "source": {
+          "url": "images/education/utsc-icon.jpg"
         },
-        {
-            "title": "Apr 20XX",
-            "cardTitle": "High School",
-            "cardSubtitle":"ABC School, City",
-            "cardDetailedText": "Marks - 95%"
-        }
-    ]
+        "type": "IMAGE"
+      }
+    }
+  ]
 }

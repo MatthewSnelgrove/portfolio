@@ -1,0 +1,22 @@
+{
+  "experience": [
+    {
+      "title": "January - April, 2023",
+      "cardTitle": "Ontario Ministry of Transportation",
+      "cardSubtitle": "Jr. Technical Analyst",
+      "cardDetailedText": [
+        "• Developed RESTful API with Java Spring Boot to support modernization of MTO's Licensing Control System",
+        "• Performed unit and integration testing using JUnit and Postman with high code coverage to track and maintain functionality",
+        "• Initiated CI/CD pipeline using Azure Pipelines and Maven to automate the build and deployment process",
+        "• Tracked and managed project progress using Azure DevOps to ensure clear understanding of tasks and deadlines among team members"
+      ],
+      "media": {
+        "name": "mto-icon",
+        "source": {
+          "url": "images/experience/mto-icon.png"
+        },
+        "type": "IMAGE"
+      }
+    }
+  ]
+}
