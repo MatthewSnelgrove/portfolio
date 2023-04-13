@@ -12,15 +12,12 @@ import { lightTheme, darkTheme } from "./theme/themes";
 function App() {
   window.matchMedia = null;
   const darkMode = useDarkMode(true);
-  console.log("isLocal: " + process.env.REACT_APP_ENV === "local");
   return (
     <AppContext.Provider value={{ darkMode }}>
       <ThemeProvider theme={darkMode.value ? darkTheme : lightTheme}>
         <GlobalStyles />
         <div className="App">
-          <BrowserRouter
-            basename={process.env.REACT_APP_ENV != "local" ? "/portfolio" : ""}
-          >
+          <BrowserRouter basename="/portfolio">
             <MainApp />
           </BrowserRouter>
         </div>
