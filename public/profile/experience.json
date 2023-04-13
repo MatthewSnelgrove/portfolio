@@ -1,31 +1,22 @@
 {
   "experience": [
     {
-      "title": "Software Engineer",
-      "subtitle": "XYZ Ltd",
-      "workType": "Full-time",
-      "workDescription": [
-        "Integrated **2** new product.",
-        "Worked on adding **def** to **bcd**. Improved speed by 50%."
+      "title": "January - April, 2023",
+      "cardTitle": "Ontario Ministry of Transportation",
+      "cardSubtitle": "Jr. Technical Analyst",
+      "cardDetailedText": [
+        "• Developed RESTful API with Java Spring Boot to support modernization of MTO's Licensing Control System",
+        "• Performed unit and integration testing using JUnit and Postman with high code coverage to track and maintain functionality",
+        "• Initiated CI/CD pipeline using Azure Pipelines and Maven to automate the build and deployment process",
+        "• Tracked and managed project progress using Azure DevOps to ensure clear understanding of tasks and deadlines among team members"
       ],
-      "dateText": "06/20XX – Present"
-    },
-    {
-      "title": "Software Engineer",
-      "subtitle": "XYZ Ltd",
-      "workType": "Internship",
-      "workDescription": ["Worked on abc."],
-      "dateText": "01/20XX – 05/20XX"
-    },
-    {
-      "title": "App Developer",
-      "subtitle": "ABC Pvt Ltd",
-      "workType": "Freelance",
-      "workDescription": [
-        "Developed the official apps for the startup for both Android and iOS using hybrid framework.",
-        "Done bcd work."
-      ],
-      "dateText": "09/20XX – 01/20YY"
+      "media": {
+        "name": "mto-icon",
+        "source": {
+          "url": "images/experience/mto-icon.png"
+        },
+        "type": "IMAGE"
+      }
     }
   ]
 }
