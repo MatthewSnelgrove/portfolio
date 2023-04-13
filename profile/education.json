@@ -5,8 +5,12 @@
       "cardTitle": "Honours Bachelor of Science, Computer Science Specialist (Co-op)",
       "cardSubtitle": "University of Toronto Scarborough",
       "cardDetailedText": "CGPA - 3.67",
-      "icon": {
-        "src": "images/education/utsc-icon.jpg"
+      "media": {
+        "name": "utsc-icon",
+        "source": {
+          "url": "images/education/utsc-icon.jpg"
+        },
+        "type": "IMAGE"
       }
     }
   ]

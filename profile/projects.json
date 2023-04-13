@@ -1,150 +1,67 @@
 {
-    "projects" : [
+  "projects": [
+    {
+      "image": "images/projects/chefswap-icon.png",
+      "title": "Chefswap - Social Cooking Meetup App",
+      "bodyText": "- A Marketplace-style social web app made to connect users over homecooked meals.\n- Implemented REST design principles to develop flexible and scalable RESTful API backend using Express\n- Applied relational database expertise to design and interface with PostgreSQL database for storing, accessing, and manipulating data securely and efficiently.\n- Documented API using Swagger enabling straightforward integration with frontend",
+      "links": [
         {
-            "image" : "images/projects/portfolio-poster.png",
-            "title": "Dev Portfolio",
-            "bodyText": "- Developer Portfolio Website made in React\n -  Fully customisable and dynamic, easily change data and images.\n - Dark Mode Support",
-            "links": [
-                {
-                    "text": "GitHub",
-                    "href": "https://github.com/mayankagarwal09/dev-portfolio"
-                },
-                {
-                    "text": "Live",
-                    "href": "https://mayankagarwal.me"
-                }
-            ],
-            "tags" : [
-                "React",
-                "Portfolio",
-                "JavaScript"
-            ]
-        },
-        {
-            "image" : "images/projects/caaring-poster.png",
-            "title": "Caaring -  Cab Share App",
-            "bodyText": "- A Cab Sharing web app made using **Django** for **VIT** Students. People can create a new cab or request to join an existing cab.\n - Added User authentication and password reset using **SendGrid**.\n - Deployed on **heroku** using **gunicorn**.",
-            "links": [
-                {
-                    "text": "GitHub",
-                    "href": "https://github.com/mayankagarwal09/Caaring"
-                },
-                {
-                    "text": "Live",
-                    "href": "http://caaring.herokuapp.com"
-                }
-            ],
-            "tags" : [
-                "Python",
-                "Django",
-                "BootStrap",
-                "SendGrid",
-                "Heroku",
-                "Gunicorn",
-                "VIT"
-            ]
-        },
-        {
-            "image" : "images/projects/quiet-hours-poster.jpg",
-            "title": "Quiet Hours App",
-            "bodyText": "- An Android App that **automatically silences** your phone during class hours, designed for **VITians**.\n - Option to select class **slots** and **custom time**.\n - Option to put on Vibrate instead of Silent.",
-            "links": [
-                {
-                    "text": "GitHub",
-                    "href": "https://github.com/mayankagarwal09/QuietHours-Android"
-                }
-            ],
-            "tags" : [
-                "Java",
-                "Android",
-                "Alarm Manager",
-                "VIT"
-            ]
-        },
-        {
-            "title": "Secure Chat App",
-            "bodyText": "- An Android App that allows users to send texts in real time.\n - End to End encryption using **RSA** Algorithm.\n - Uses **Firebase** database to store texts.\n - Secured with **Fingerprint** lock.",
-            "links": [
-                {
-                    "text": "GitHub",
-                    "href": "https://github.com/mayankagarwal09/SecureChatApp"
-                }
-            ],
-            "tags" : [
-                "Java",
-                "Android",
-                "Firebase",
-                "RSA"
-            ]
-        },
-        {
-            "title": "MVVM Sample App",
-            "bodyText": "- An Android App that loads data from mock API and show in both **LinearLayout** and **GridLayout RecyclerView**.\n - Offline support using **Room** DB and **NetworkBoundResource**.\n - Uses the **MVVM** architecture.",
-            "links": [
-                {
-                    "text": "GitHub",
-                    "href": "https://github.com/mayankagarwal09/mvvm-sample-app"
-                }
-            ],
-            "tags" : [
-                "Kotlin",
-                "Android",
-                "MVVM",
-                "Room",
-                "Coroutines",
-                "Flow",
-                "Hilt-Dagger",
-                "NetworkBoundResource"
-            ]
-        },
-        {
-            "title": "Feed List App",
-            "bodyText": "- An Android App that loads list of feeds from a **paginated** API and shows in a RecyclerView.\n - Uses the **MVVM** architecture.\n - Uses **Paging 3** library along with other Architecture Components.",
-            "links": [
-                {
-                    "text": "GitHub",
-                    "href": "https://github.com/mayankagarwal09/Paginated-App-Feeds-List"
-                }
-            ],
-            "tags" : [
-                "Kotlin",
-                "Android",
-                "MVVM",
-                "Paging 3",
-                "Coroutines",
-                "Flow"
-            ]
-        },
-        {
-            "title": "Task Tracker",
-            "bodyText": "- A simple Task Tracker web app made with **Angular 12**.\n - Uses **mock JSON server** to get, add, delete or update tasks.",
-            "links": [
-                {
-                    "text": "GitHub",
-                    "href": "https://github.com/mayankagarwal09/task-tracker-app"
-                }
-            ],
-            "tags" : [
-                "TypeScript",
-                "Angular 12",
-                "JavaScript"
-            ]
-        },
-        {
-            "title": "Image Encryption/Decryption",
-            "bodyText": "- A Web App for Image Encryption and Decryption made in **Django**.\n - Uses **SDES** algorithm for encryption/decryption.",
-            "links": [
-                {
-                    "text": "GitHub",
-                    "href": "https://github.com/mayankagarwal09/img-encrypt-sdes"
-                }
-            ],
-            "tags" : [
-                "Python",
-                "Django",
-                "SDES",
-                "Cryptography"
-            ]
+          "text": "GitHub",
+          "href": "https://github.com/MatthewSnelgrove/chefswap"
         }
-    ]
+      ],
+      "tags": ["React", "Node", "Express", "PostgreSQL", "JS"]
+    },
+    {
+      "image": "images/projects/plantpedia-icon.jpg",
+      "title": "PlantPedia - AI-powered Plant Identification App",
+      "bodyText": "- A mobile app that uses AI to identify plants and provide information about them.\n- Model built with TensorFlow has over 90% accuracy in identifying plants from images",
+      "links": [
+        {
+          "text": "GitHub",
+          "href": "https://github.com/MatthewSnelgrove/Plantpedia"
+        }
+      ],
+      "tags": ["Python", "Kivy", "TensorFlow", "Machine Learning"]
+    },
+    {
+      "image": "images/projects/smsassist-icon.png",
+      "title": "SMS Assist - SMS chatbot for customer service",
+      "bodyText": "- An SMS chatbot that uses AI to provide customer service.\n- Used IBM Watson Assistant to classify intent from user input and choose appropriate response\n- Send and receive messages using Twilio API for easy and convenient customer support access via SMS",
+      "links": [
+        {
+          "text": "GitHub",
+          "href": "https://github.com/deetsadi/SMS-HelpDesk"
+        }
+      ],
+      "tags": [
+        "Node",
+        "Twilio",
+        "IBM Watson",
+        "Natural Language Processing",
+        "Chatbot"
+      ]
+    },
+    {
+      "image": "images/projects/alexamd-icon.png",
+      "title": "Alexa MD - Amazon Alexa skill for medical diagnosis and treatment suggestions",
+      "bodyText": "- An Amazon Alexa skill that uses AI to diagnose medical conditions and provide treatment suggestions.\n- Designed decision tree using Voiceflow to ask and track user symptoms and provide appropriate treatment suggestions for predicted illness\n- Compiled data from CDC and WHO to quantitatively associate symptoms with illnesses for use in prediction algorithm\n- Assign probabilities to each illness based on each symptom's association with that illness",
+      "links": [
+        {
+          "text": "Voiceflow Prototype",
+          "href": "https://creator.voiceflow.com/prototype/5df30bcb3084ff20c24b0a63"
+        },
+        {
+          "text": "Medical Data",
+          "href": "https://docs.google.com/spreadsheets/d/1SScwNAYiOTVJXG90zYkKfwaVVPIaSQZRx77SC4s80Z4"
+        }
+      ],
+      "tags": [
+        "Voiceflow",
+        "Amazon Alexa",
+        "Chatbot",
+        "Natural Language Processing"
+      ]
+    }
+  ]
 }
