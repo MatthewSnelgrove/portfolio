@@ -55,10 +55,11 @@ function Experience(props) {
                 mode={mode}
                 theme={{
                   primary: theme.accentColor,
-                  secondary: theme.color,
+                  secondary: theme.background,
                   cardBgColor: theme.chronoTheme.cardBgColor,
                   cardForeColor: theme.chronoTheme.cardForeColor,
-                  titleColorActive: theme.background,
+                  titleColorActive: theme.chronoTheme.cardForeColor,
+                  titleColor: theme.chronoTheme.cardForeColor,
                 }}
               >
                 <div className="chrono-icons">
