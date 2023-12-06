@@ -1,6 +1,23 @@
 {
   "experience": [
     {
+      "title": "September 2023 - Present",
+      "cardTitle": "International Financial Data Services",
+      "cardSubtitle": "Full Stack Developer",
+      "cardDetailedText": [
+        "• Diagnosed cause of production issues in a timely manner to ensure minimal impact on business operations",
+        "• Developed fixes for automated workflow distribution application using Javascript and Angular",
+        "• Designed and implemented process auditing app with Node and React to track and report on services used by clients"
+      ],
+      "media": {
+        "name": "ifds-icon",
+        "source": {
+          "url": "images/experience/ifds-icon.jpg"
+        },
+        "type": "IMAGE"
+      }
+    },
+    {
       "title": "January - April, 2023",
       "cardTitle": "Ontario Ministry of Transportation",
       "cardSubtitle": "Jr. Technical Analyst",
