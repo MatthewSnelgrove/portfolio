@@ -7,7 +7,9 @@
       "cardDetailedText": [
         "• Diagnosed cause of production issues in a timely manner to ensure minimal impact on business operations",
         "• Developed fixes for automated workflow distribution application using Javascript and Angular",
-        "• Designed and implemented process auditing app with Node and React to track and report on services used by clients"
+        "• Designed and implemented process auditing app with Node and React to track and report on services used by clients",
+        "• Documented and maintained codebase with jsDoc to ensure future developers can easily understand and maintain the application",
+        "• Investigated new internal tools and created customized user guides for specific team use cases to expedite integration"
       ],
       "media": {
         "name": "ifds-icon",
