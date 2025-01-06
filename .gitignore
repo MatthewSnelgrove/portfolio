@@ -22,3 +22,8 @@ package-lock.json
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+/public/resume/*.aux
+/public/resume/*.log
+/public/resume/*.out
+/public/resume/*.synctex.gz
