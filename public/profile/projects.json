@@ -1,6 +1,50 @@
 {
   "projects": [
     {
+      "image": "images/projects/superbiddo-icon.png",
+      "title": "Superbiddo - Trading Card Marketplace App",
+      "bodyText": "- Applied REST design principles to develop flexible and scalable API using Express\n- Documented API using Swagger following OpenAPI 3.0 specification\n- Designed and implemented robust database model with PostgreSQL\n- Integrated Google Cloud Storage, Google Oauth, and Google Maps API.\n- Performed integration testing with Postman\n- Deployed app using containerized three-tier architecture with HTTPS on a Google Cloud VM with Docker\n- Configured Google Cloud VM instance to host containerized application, ensuring efficient resource utilization, minimal cost for performance requirements, and secure networking\n- Automated deployments with bash script\n- Secured app with helmet.js, data validation, CSRF protection, and session-based authentication",
+      "links": [
+        {
+          "text": "GitHub",
+          "href": "https://github.com/UTSCC09/project-SUPERBIDDO"
+        },
+        {
+          "text": "Deployed App",
+          "href": "https://matthewsnelgrove.me"
+        }
+      ],
+      "tags": [
+        "Node",
+        "Express",
+        "PostgreSQL",
+        "Typescript",
+        "RESTful API",
+        "Google Cloud",
+        "Docker"
+      ]
+    },
+    {
+      "image": "images/projects/stockPortfolio-icon.png",
+      "title": "Stock Portfolio App",
+      "bodyText": "- Designed and implemented database for social stock tracking platform\n- Optimized statistical correlation and covariance queries by precomputing results in a materialized view, reducing query time by 98%\n- Designed and implemented RESTful API with Express to provide secure access to personalized stock data",
+      "links": [
+        {
+          "text": "GitHub",
+          "href": "https://github.com/andre-fong/Portfolio-Social-Network"
+        }
+      ],
+      "tags": [
+        "React",
+        "Node",
+        "Express",
+        "Javascript",
+        "RESTful API",
+        "PostgreSQL",
+        "Optimization"
+      ]
+    },
+    {
       "image": "images/projects/chefswap-icon.png",
       "title": "Chefswap - Social Cooking Meetup App",
       "bodyText": "- A Marketplace-style social web app made to connect users over homecooked meals.\n- Implemented REST design principles to develop flexible and scalable RESTful API backend using Express\n- Applied relational database expertise to design and interface with PostgreSQL database for storing, accessing, and manipulating data securely and efficiently.\n- Documented API using Swagger enabling straightforward integration with frontend",
@@ -10,11 +54,23 @@
           "href": "https://github.com/MatthewSnelgrove/chefswap"
         }
       ],
-      "tags": ["React", "Node", "Express", "PostgreSQL", "JS"]
+      "tags": ["React", "Node", "Express", "PostgreSQL", "Javascript"]
+    },
+    {
+      "image": "images/projects/traffic-racer-icon.png",
+      "title": "Traffic Racer - Assembly Racing Game",
+      "bodyText": "- A racing game made in x86 Assembly language\n- Implemented game logic, graphics, and user input handling in Assembly",
+      "links": [
+        {
+          "text": "GitHub",
+          "href": "https://github.com/MatthewSnelgrove/TrafficRacer"
+        }
+      ],
+      "tags": ["Assembly", "Game Development"]
     },
     {
       "image": "images/projects/plantpedia-icon.jpg",
-      "title": "PlantPedia - AI-powered Plant Identification App",
+      "title": "PlantPedia - AI-Powered Plant Identification App",
       "bodyText": "- A mobile app that uses AI to identify plants and provide information about them.\n- Model built with TensorFlow has over 90% accuracy in identifying plants from images",
       "links": [
         {
