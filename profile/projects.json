@@ -59,7 +59,7 @@
     {
       "image": "images/projects/traffic-racer-icon.png",
       "title": "Traffic Racer - Assembly Racing Game",
-      "bodyText": "- A racing game made in x86 Assembly language\n- Implemented game logic, graphics, and user input handling in Assembly",
+      "bodyText": "- A racing game made in MIPS Assembly language\n- Implemented game logic, graphics, and user input handling in Assembly",
       "links": [
         {
           "text": "GitHub",
