@@ -17,8 +17,8 @@
           "title": "Python"
         },
         {
-          "icon": "images/skills/mysql.png",
-          "title": "MySQL"
+          "icon": "images/skills/c.png",
+          "title": "C"
         },
         {
           "icon": "images/skills/postgres.png",
@@ -30,8 +30,8 @@
       "title": "Frameworks & Technologies",
       "items": [
         {
-          "icon": "images/skills/android_new.png",
-          "title": "Android"
+          "icon": "images/skills/springBoot.jpg",
+          "title": "Spring Boot"
         },
         {
           "icon": "images/skills/react.png",
@@ -47,16 +47,20 @@
       "title": "Tools & Platforms",
       "items": [
         {
-          "icon": "images/skills/android-studio.png",
-          "title": "Android Studio"
-        },
-        {
           "icon": "images/skills/git.png",
           "title": "Git"
         },
         {
           "icon": "images/skills/docker.png",
           "title": "Docker"
+        },
+        {
+          "icon": "images/skills/googleCloud.png",
+          "title": "Google Cloud Platform"
+        },
+        {
+          "icon": "images/skills/azure.png",
+          "title": "Azure"
         }
       ]
     }
