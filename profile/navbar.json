@@ -24,6 +24,11 @@
     {
       "title": "Projects",
       "href": "/projects"
+    },
+    {
+      "title": "Resume",
+      "type": "link",
+      "href": "resume/resume.pdf"
     }
   ]
 }

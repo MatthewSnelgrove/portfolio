@@ -20,6 +20,10 @@
 \usepackage{tabularx}
 \usepackage{xcolor}
 
+\usepackage{luatex85}
+\usepackage{fontspec}
+\usepackage{ragged2e}
+
 \usepackage{anyfontsize}
 \usepackage{tabularx}
 \usepackage{fontawesome5} % For icons
@@ -50,11 +54,10 @@
 \renewcommand{\footrulewidth}{0pt}
 
 % Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-0.65in}
-\addtolength{\textheight}{1.5in}
+\addtolength{\oddsidemargin}{-0.65in}
+\addtolength{\textwidth}{1.3in}
+\addtolength{\topmargin}{-0.80in}
+\addtolength{\textheight}{1.6in}
 
 \urlstyle{same}
 
@@ -88,14 +91,14 @@
 \newcommand{\resumeSubheading}[3]{
   \vspace{-0pt}\item
     \begin{tabular*}{1\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} $|$ \textbf{#2} & #3 \\
+      \textbf{#1} $|$ \textbf{#2} & {#3}\\
     \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeProjectHeading}[5]{
     \item
     \begin{tabular*}{1\textwidth}{l@{\extracolsep{\fill}}r}
-      \textbf{#1} \hspace{0.5em} \href{#2}{\normalsize \faGithub} \hspace{0.5em} \href{#3}{#5} & #4 \\
+      \textbf{#1}\hspace{0.5em}{#2}\hspace{0.5em}{#3}\hspace{0.5em}$|$ \scriptsize{#4} & {#5}\\
     \end{tabular*}\vspace{-7pt}
 }
 
@@ -108,56 +111,62 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
+
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \begin{document}
-
 % Name and Contact Section
 \begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}
   {\fontsize{40}{40}\selectfont Matthew Snelgrove} & % Name on the left
   \begin{tabular}{rl} % Contacts on the right
       \large \faPhone & \hspace{0.5em} \large {647-391-9595} \\
-      \large \faEnvelope & \hspace{0.5em} \large \href{mailto:matthew.s13542@gmail.com}{matthew.s13542@gmail.com} \\
-      \large \faGithub & \hspace{0.5em} \large \href{https://github.com/matthewSnelgrove/}{matthewSnelgrove} \\
-      \large \faLink & \hspace{0.5em} \large \href{https://matthewsnelgrove.github.io/portfolio}{portfolio} \\
+      \large \href{mailto:matthew.s13542@gmail.com} \faEnvelope & \hspace{0.5em} \large \href{mailto:matthew.s13542@gmail.com}{matthew.s13542@gmail.com} \\
+      \large \href{https://github.com/matthewSnelgrove/} \faGithub & \hspace{0.5em} \large \href{https://github.com/matthewSnelgrove/}{matthewSnelgrove} \\
+      \large \href{https://matthewsnelgrove.github.io/portfolio} \faLink & \hspace{0.5em} \large \href{https://matthewsnelgrove.github.io/portfolio}{portfolio} \\
   \end{tabular} \\
 \end{tabular*}
 
-\vspace{-1.5em} % Adjust spacing below the header
+% Simple header for word doc parsing
+% \fontsize{40}{40}\selectfont Matthew Snelgrove
+
+% % \vspace{0.2em}
+% \small
+%   647-391-9595 \hspace{0.5em} \textbullet \hspace{0.5em}
+%   \href{mailto:matthew.s13542@gmail.com}{matthew.s13542@gmail.com} \hspace{0.5em} \textbullet \hspace{0.5em} 
+%   \href{https://github.com/matthewSnelgrove/}{github.com/matthewSnelgrove} \hspace{0.5em} \textbullet \hspace{0.5em} 
+%   \href{https://matthewsnelgrove.github.io/portfolio}{portfolio}
+
+
+\vspace{-1em} % Adjust spacing below the header
 
 
 %-----------EDUCATION-----------
 \section{Education}
   \resumeSubHeadingListStart
     \resumeEducationHeading
-      {University of Toronto, Scarborough}{Computer Science}{CGPA: 3.72}{Sept. 2021 -- Present}
-      \resumeItemListStart
-        \resumeItem{Courses: Data Structures, Algorithms, Software Design, Security, Databases, Web Development}
-      \resumeItemListEnd
+      {University of Toronto, Scarborough}{Computer Science}{CGPA: 3.72}{Sept 2021 -- Present}
+      \resumeItem{Courses: Data Structures, Algorithms, Software Design, Security, Databases, Operating Systems, Web Development}
   \resumeSubHeadingListEnd
-
-
 %-----------EXPERIENCE-----------
 \section{Experience}
   \resumeSubHeadingListStart
-
     \resumeSubheading
-      {SS\&C Technologies (IFDS)}{Software Developer}{September. 2023 -- April 2024}
+      {SS\&C Technologies (IFDS)}{Software Developer}{Sept 2023 -- Apr 2024}
       \resumeItemListStart
-        \resumeItem{Redesigned auditing app into modern webapp with Node and React leveraging internal APIs to replace expensive file parsing and decrease load times by 99\%}
-        \resumeItem{Documented codebase with jsDoc and created comprehensive wiki entries minimizing maintenance costs and expediting project handover}
-        \resumeItem{Identified and patched production bugs across team apps rapidly, minimizing impact on business operations}
-        \resumeItem{Investigated new internal tools and created tailored user guides to facilitate effective integration into core apps}
+      \resumeItem{Eliminated \textbf{3 hours} of managerial work per week by \textbf{automating} component dependency tracking with \textbf{internal RESTful APIs}, and visualized the output in graphical and tabular views in a modern \textbf{React} web app.}
+      \resumeItem{Ensured the maintainability and extendibility of the project with modular design, \textbf{jsDoc code documentation}, and comprehensive wiki entries.}
+      \resumeItem{Reduced \textbf{defect response time} by \textbf{50\%} by rapidly identifying and patching \textbf{production bugs} across team apps.}
+      \resumeItem{Accelerated modernization projects by \textbf{investigating internal tools} and delivering actionable \textbf{user guides} to streamline their integration into existing systems.}
       \resumeItemListEnd
 
     \resumeSubheading
-      {Ontario Ministry of Transportation}{Junior Technical Analyst}{January. 2023 -- April 2023}
+      {Ontario Ministry of Transportation}{Junior Technical Analyst}{Jan 2023 -- Apr 2023}
       \resumeItemListStart
-        \resumeItem{Developed RESTful API with Java Spring Boot for modernization of critical driver/vehicle registration systems}
-        \resumeItem{Performed automated unit and integration testing with JUnit and Postman to verify functionality and identify errors caused by frequently changing internal dependencies, reducing debugging time by over 50\%}
-        \resumeItem{Ran builds and deployments with Maven and Azure Pipelines to eliminate time consuming and error-prone manual builds and save $\sim$3 hours per week of developer time}
+        \resumeItem{Developed a \textbf{RESTful API} to modernize critical driver/vehicle registration systems with \textbf{Java Spring Boot}.}
+        \resumeItem{Cut debugging time by \textbf{over 50\%} through \textbf{automated unit and integration testing} with \textbf{JUnit and Postman}, achieving \textbf{100\% code coverage} and preemptively identifying errors caused by pending dependency updates.}
+        \resumeItem{Recovered \textbf{$\sim$3 hours} per week of developer time by \textbf{building and deploying} new versions with \textbf{Maven and Azure Pipelines} instead of time-consuming and error-prone manual builds.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -166,31 +175,45 @@
 %-----------PROJECTS-----------
 \section{Projects}
     \resumeSubHeadingListStart
-      \resumeProjectHeading
-        {\textbf{Superbiddo}}{https://github.com/UTSCC09/project-SUPERBIDDO/}{https://matthewsnelgrove.me/}{October 2024 -- December 2024}{\normalsize \faLink}
+      \resumeProjectHeading{\textbf{Superbiddo}}{\href{https://github.com/UTSCC09/project-SUPERBIDDO/}{\normalsize \faGithub}}{\href{https://matthewsnelgrove.me/}{\normalsize \faLink}}{RESTful APIs, PostgreSQL, Google Cloud, Docker, Deployment, Automation, Bash, Security}{Oct 2024 -- Dec 2024}
+        \resumeItemListStart
+          % \resumeItem{Implemented core features for the auction-based marketplace app by developing a flexible and scalable RESTful API using Express and a relational database using PostgreSQL.}
+          \resumeItem{Implemented core functionality for an auction-based marketplace app by developing a \textbf{relational database} using \textbf{PostgreSQL}, and a \textbf{RESTful API} using \textbf{Express} with \textbf{YAML documentation} following \textbf{OpenAPI specification}.}
+          % \resumeItem{Minimized cloud costs and optimized server performance by handling image storage and retrieval with Google Cloud Storage and integrating lifecycle rules to delete orphaned files automatically.}
+          % \resumeItem{Deployed app with a three-tier architecture on a Google Cloud VM using Docker, enabling targeted optimization, independent updates to each layer, and robust scalability.}
+          % \resumeItem{Ensured 100\% uptime, robust security, and ample performance at minimal cost by customizing a Google Cloud VM to host the containerized application, setting up monitoring and alerts, and enforcing secure network configurations.}
+          \resumeItem{Optimized a \textbf{Google Cloud VM} to host the app with \textbf{Docker}, achieving \textbf{100\% uptime}, cost efficiency, and secure networking through resource fine-tuning, proactive monitoring and alerts, and stringent network configurations.}
+          % \resumeItem{Eliminated 5 hours of deployment time weekly by automating consistent and reliable deployments with a bash script to build images, upload them to the VM, and start containers with secrets using a Docker Compose file.}
+          \resumeItem{Eliminated \textbf{5 hours} of manual deployment time weekly by \textbf{automating} consistent \textbf{deployments} with a \textbf{bash script}.}
+          \resumeItem{Mitigated \textbf{OWSAP Top 10 web vulnerabilities} by implementing session-based authentication and access control, salted password hashing, data validation and sanitization, CSRF protection, and HTTPS.}
+        \resumeItemListEnd
+
+      \resumeProjectHeading{\textbf{Pintos Operating System}}{\hspace{-0.5em}}{\hspace{-0.5em}}{C, Systems Programming, Operating Systems, Optimization}{May 2024 -- Aug 2024}
+        \resumeItemListStart
+          \resumeItem{Extended a rudimentary \textbf{operating system} in \textbf{C} to support system calls, indexed and extensible files, and ELF program execution while ensuring stability and performance in a \textbf{multithreaded} environment.}
+          \resumeItem{Improved fairness and \textbf{responsiveness} by implementing priority donation and a multi-level feedback queue scheduler (MLFQS) to dynamically adjust thread priorities based on CPU usage and workload.}
+          \resumeItem{\textbf{Optimized} memory management and \textbf{reduced page fault frequency by 30\%} by designing a virtual memory system with LRU-approximated page replacement using the clock algorithm.}
+        \resumeItemListEnd
+        
+        \resumeProjectHeading{\textbf{Stock Portfolio App}}{\href{https://github.com/andre-fong/Portfolio-Social-Network}{\normalsize \faGithub}}{\hspace{-0.5em}}{PostgreSQL, Database Optimization, Relational Databases, SQL}{Aug 2024}       
           \resumeItemListStart
-          \resumeItem{Developed flexible and scalable RESTful API using Express with comprehensive documentation following OpenAPI 3.0 specification to enable straightforward integration by client}
-          \resumeItem{Integrated Google Cloud Storage to remotely store and retrieve large image files, reducing load on the server, and added lifecycle rules to delete orphaned files automatically, reducing bloat and cloud costs}
-          \resumeItem{Deployed app using three-tier architecture with HTTPS on a Google Cloud VM, creating Docker containers for the frontend, backend, and database layers to enable targeted optimization, robust scalability, and independent updates to layers}
-          \resumeItem{Configured Google Cloud VM instance to host containerized application, ensuring efficient resource utilization, minimal cost for performance requirements, and secure networking}
-          \resumeItem{Automated deployments with bash script to build+upload images and start containers with secrets using Docker Compose file, saving hours of manual deployment time and ensuring consistent, reliable deployments}
-          \resumeItem{Secured app with helmet.js, data validation, CSRF protection, and session-based authentication, fully protecting the app from exploitation and earning a bonus during grading}
+            \resumeItem{Designed and implemented a \textbf{PostgreSQL database} for portfolio management, and \textbf{optimized} stock correlation and covariance queries by precomputing the results in a \textbf{materialized view, reducing query time by 98\%}.}
           \resumeItemListEnd
-          
-      \resumeProjectHeading{\textbf{Stock Portfolio App}}{https://github.com/andre-fong/Portfolio-Social-Network}{}{August 2024}{}
-          \resumeItemListStart
-            \resumeItem{Designed and implemented database for social stock tracking platform}
-            \resumeItem{Optimized statistical correlation and covariance queries by precomputing results in a materialized view, reducing query time by 98\%}
-          \resumeItemListEnd
-      \resumeSubHeadingListEnd
+
+        % \resumeProjectHeading{\textbf{Assembly Racing Game}}{\href{https://github.com/MatthewSnelgrove/TrafficRacer}{\normalsize \faGithub}}{\hspace{-1em}}{Skills}{Aug 2022}
+        %   \resumeItemListStart
+        %     \resumeItem{Developed a 2D racing game in MIPS Assembly with keyboard input and bitmap display output.}
+        %     \resumeItem{Achieved 60 FPS gameplay by optimizing the game loop, sprite rendering, and collision detection algorithms.}
+        %   \resumeItemListEnd
+        \resumeSubHeadingListEnd
 
 %-----------SKILLS-----------
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0in, label={}]
     \item{
-     \textbf{Languages}{: Java, JavaScript/TypeScript, Python, C/C++, C\#, SQL (Postgres), HTML, CSS} \\
-     \textbf{Frameworks \& Libraries}{: Node.js, Express.js, Spring Boot, React, MongoDb, JUnit, jQuery} \\
-     \textbf{Developer Tools}{: Git, Docker, Google Cloud Platform, Azure, Postman, OpenApi} \\
+     \textbf{Languages}{: TypeScript, JavaScript, Java, Python, C/C++, C\#, SQL (Postgres), Bash, YAML, HTML, CSS} \\
+     \textbf{Frameworks \& Libraries}{: Node.js, Express.js, Spring Boot, React, MongoDb, JUnit, Mocha, Chai, NumPy} \\
+     \textbf{Developer Tools}{: Git, Docker, Google Cloud Platform, Azure, Postman, OpenApi, } \\
     }
  \end{itemize}
 
